@@ -15,38 +15,48 @@ A análise foi guiada por perguntas organizadas em blocos temáticos:
 **Fatores individuais**
 - O sexo do passageiro influenciou a sobrevivência?
 - A classe social influenciou a sobrevivência?
-- Crianças tiveram vantagem sobre adultos? O sexo importou entre elas?
-- A distribuição de idade difere entre sobreviventes e não sobreviventes?
-- Existe um padrão mais fino de sobrevivência por faixa etária?
+- Crianças tiveram vantagem sobre adultos?
+- Entre as crianças, o sexo também influenciou na taxa de sobrevivência?
+- A distribuição de idade foi diferente entre sobreviventes e não-sobreviventes?
+- A sobrevivência varia entre diferentes faixas etárias (não só criança/adulto)?
+- Dentro de cada faixa etária, houve alguma diferença na taxa de sobrevivência dependendo do sexo?
 
 **Combinações de fatores**
 - Sexo e classe combinados explicam melhor a sobrevivência?
-- A vantagem de ser criança se mantém em todas as classes sociais?
-- O porto de embarque, combinado com a classe, ainda influencia a sobrevivência?
-- O padrão de sobrevivência por idade e sexo se mantém em diferentes classes?
+- A vantagem de ser criança se mantém em todas as classes sociais, ou só nas mais altas?
+- O local de embarque, quando combinado com a classe social, ainda influencia a sobrevivência?
+- A vantagem de sobrevivência por idade e sexo se mantém em diferentes classes sociais?
+- Viajar sozinho influenciou a sobrevivência de forma diferente entre homens, mulheres e crianças?
+- A tarifa paga variou entre homens e mulheres dentro da mesma classe social?
 
 **Família e composição do grupo**
-- O tamanho da família influenciou a sobrevivência? Existe um "ponto ideal"?
-- Viajar sozinho fez diferença? De forma igual para homens, mulheres e crianças?
-- `sibsp` (irmãos/cônjuge) e `parch` (pais/filhos) têm efeitos diferentes entre si?
+- O tamanho das famílias influenciou na sobrevivência dos indivíduos?
+- Antes de tirar conclusões: os grupos de tamanho de família têm amostra suficiente?
+- Viajar sozinho influenciou a sobrevivência, independente do tamanho da família?
+- `sibsp` (irmãos/cônjuge) e `parch` (pais/filhos) têm efeitos diferentes entre si na sobrevivência?
+- O tamanho ideal de família (o "ponto ideal" observado) se mantém dentro de cada classe social?
+- O tamanho da família teve o mesmo efeito para homens e mulheres?
 
 **Fatores econômicos**
-- A tarifa paga influenciou a sobrevivência?
-- Existem outliers relevantes na tarifa? O que eles representam?
-- A tarifa "por cabeça" discrimina melhor do que a tarifa bruta?
-- Pagar mais dentro da mesma classe trouxe vantagem?
+- A tarifa paga (`fare`) influenciou a sobrevivência?
+- A tarifa tem outliers relevantes? O que eles representam?
+- A tarifa "por cabeça" (`fare` dividido pelo tamanho da família) discrimina melhor do que a tarifa bruta?
+- A tarifa média variou entre as diferentes classes sociais?
+- Passageiros que pagaram tarifas mais altas dentro da mesma classe tiveram vantagem na sobrevivência?
 
 **Localização e contexto**
-- O porto de embarque influenciou a sobrevivência, isoladamente ou como variável de confusão?
-- A idade dos passageiros varia entre classes e portos?
+- O local de embarque influenciou na taxa de sobrevivência?
+- Qual a composição de classes sociais em cada porto de embarque?
+- A idade dos passageiros varia entre as classes sociais?
+- A idade dos passageiros também variou por porto de embarque?
 
 **Qualidade e estrutura dos dados**
-- Os dados faltantes em `age` seguem algum padrão (viés por classe/sexo)?
-- Existe multicolinearidade entre variáveis numéricas?
-- As linhas duplicadas representam um problema real?
+- Os dados faltantes em `age` estão distribuídos aleatoriamente entre os grupos, ou há um padrão?
+- Existe correlação entre as variáveis numéricas que sugere redundância de informação (multicolinearidade)?
+- Existem linhas duplicadas no dataset? Isso é um problema real ou uma limitação estrutural dos dados?
 
 **Engenharia de atributos**
-- É possível combinar sexo e idade numa única variável (`sex_age_score`) que discrimine melhor a sobrevivência?
+- É possível criar variáveis (features) que capturem melhor o padrão de sobrevivência, combinando sexo e idade?
 
 ## Principais achados
 
@@ -100,5 +110,3 @@ jupyter notebook eda_titanic.ipynb
 ## Autor
 
 Gustavo — estudante de Ciência da Computação (UFPB)
-
-Projeto orientado pelo professor Miguel Mochizuki.
